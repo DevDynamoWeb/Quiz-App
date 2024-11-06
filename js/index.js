@@ -515,24 +515,28 @@ let score = 0;
 function startQuiz() {
   questionsIndex = 0;
   score = 0;
- nextButton.innerHTML="NEXT"
-showQuestion();
+  nextButton.innerHTML = "NEXT";
+  showQuestion();
 }
+
 function showQuestion() {
   resetPreviousQue();
   let currentQuestion = questions[questionsIndex];
-  let queNo = questionsIndex+1;
+  let queNo = questionsIndex + 1;
 
   questionelemnt.innerHTML = queNo + '.' + currentQuestion.question;
 
-  currentQuestion.ans.forEach(ans => {
+  // Shuffle the answers before displaying them
+  const shuffledAnswers = currentQuestion.ans.sort(() => Math.random() - 0.5);
+
+  shuffledAnswers.forEach(ans => {
     const button = document.createElement('button');
     button.innerHTML = ans.text;
     button.classList.add('btn');
     ansButton.appendChild(button);
     if (ans.correct) {
       button.dataset.correct = ans.correct;
-     }
+    }
     button.addEventListener("click", selectAns);
   })
 }
@@ -543,17 +547,15 @@ function resetPreviousQue() {
     ansButton.removeChild(ansButton.firstChild);
   }
 }
-  
+
 function selectAns(e) {
   const selectBtn = e.target;
   const correctAns = selectBtn.dataset.correct === 'true';
   if (correctAns) {
     selectBtn.classList.add('correct');
     score++;
-  }
-  else {
+  } else {
     selectBtn.classList.add('incorrect');
-  
   }
 
   Array.from(ansButton.children).forEach(button => {
@@ -563,40 +565,45 @@ function selectAns(e) {
     button.disabled = true;
   });
   nextButton.style.display = 'block';
-  
 }
 
 function handleNextButton() {
   questionsIndex++;
   if (questionsIndex < questions.length) {
     showQuestion()
-    
-  }
-  else {
+  } else {
     showScore();
-
   }
 }
 
-
 function showScore() {
   resetPreviousQue();
-  questionelemnt.innerHTML = `Your scored ${score} out of ${questions.length} `
-  
+  questionelemnt.innerHTML = `Your scored ${score} out of ${questions.length}`;
+
+  // Save score to localStorage
+  localStorage.setItem('lastScore', score);
+
   nextButton.innerHTML = 'Play Again';
   nextButton.style.display = 'block';
 }
 
-nextButton.addEventListener('click',()=> {
-  if(questionsIndex < questions.length){
-  handleNextButton();
+// Show the last score if available when the page is loaded
+window.onload = function() {
+  const lastScore = localStorage.getItem('lastScore');
+  if (lastScore !== null) {
+    alert(`Your last score was: ${lastScore}`);
+  }
+};
+
+nextButton.addEventListener('click', () => {
+  if (questionsIndex < questions.length) {
+    handleNextButton();
   } else {
     startQuiz();
   }
-})
+});
 
 startQuiz();
 
-// localStorage.setItem()
 
 
