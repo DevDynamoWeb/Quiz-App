@@ -1,0 +1,210 @@
+const questions = [
+  {
+    que_no: 24,
+    question: "Which two of the following models will not be able to give the desired outcome if user’s participation is not involved?",
+    ans: [
+      { text: "Waterfall & Spiral", correct: false },
+      { text: "RAD & Spiral", correct: false },
+      { text: "RAD & Waterfall", correct: true },
+      { text: "RAD & Prototyping", correct: false }
+    ]
+  },
+  {
+    que_no: 25,
+    question: "Which of the following life cycle model can be chosen if the development team has less experience on similar projects?",
+    ans: [
+      { text: "Spiral", correct: true },
+      { text: "Waterfall", correct: false },
+      { text: "RAD", correct: false },
+      { text: "Iterative Enhancement Model", correct: false }
+    ]
+  },
+  {
+    que_no: 26,
+    question: "If you were a lead developer of a software company and you are asked to submit a project/product within a stipulated time-frame with no cost barriers, which model would you select?",
+    ans: [
+      { text: "Waterfall", correct: false },
+      { text: "Spiral", correct: false },
+      { text: "RAD", correct: true },
+      { text: "Incremental", correct: false }
+    ]
+  },
+  {
+    que_no: 27,
+    question: "A company is developing an advance version of their current software available in the market, what model approach would they prefer?",
+    ans: [
+      { text: "RAD", correct: false },
+      { text: "Iterative Enhancement", correct: false },
+      { text: "Both RAD & Iterative Enhancement", correct: true },
+      { text: "Spiral", correct: false }
+    ]
+  },
+  {
+    que_no: 28,
+    question: "The spiral model has two dimensions namely _____________ and ____________",
+    ans: [
+      { text: "diagonal, angular", correct: false },
+      { text: "radial, perpendicular", correct: false },
+      { text: "radial, angular", correct: true },
+      { text: "diagonal, perpendicular", correct: false }
+    ]
+  },
+  {
+    que_no: 29,
+    question: "Which two models doesn’t allow defining requirements early in the cycle?",
+    ans: [
+      { text: "Waterfall & RAD", correct: false },
+      { text: "Prototyping & Spiral", correct: false },
+      { text: "Prototyping & RAD", correct: true },
+      { text: "Waterfall & Spiral", correct: false }
+    ]
+  },
+  {
+    que_no: 30,
+    question: "Identify the disadvantage of Spiral Model.",
+    ans: [
+      { text: "Doesn’t work well for smaller projects", correct: true },
+      { text: "High amount of risk analysis", correct: false },
+      { text: "Strong approval and documentation control", correct: false },
+      { text: "Additional Functionality can be added at a later date", correct: false }
+    ]
+  },
+  {
+    que_no: 31,
+    question: "RAD stands for",
+    ans: [
+      { text: "Relative Application Development", correct: false },
+      { text: "Rapid Application Development", correct: true },
+      { text: "Rapid Application Document", correct: false },
+      { text: "None of the mentioned", correct: false }
+    ]
+  },
+  {
+    que_no: 32,
+    question: "SDLC stands for",
+    ans: [
+      { text: "Software Development Life Cycle", correct: true },
+      { text: "System Development Life cycle", correct: false },
+      { text: "Software Design Life Cycle", correct: false },
+      { text: "System Design Life Cycle", correct: false }
+    ]
+  },
+  {
+    que_no: 33,
+    question: "Which model can be selected if user is involved in all the phases of SDLC?",
+    ans: [
+      { text: "Waterfall Model", correct: false },
+      { text: "Prototyping Model", correct: false },
+      { text: "RAD Model", correct: false },
+      { text: "Both Prototyping Model & RAD Model", correct: true }
+    ]
+  },
+  {
+    que_no: 34,
+    question: "What is the major drawback of using RAD Model?",
+    ans: [
+      { text: "Highly specialized & skilled developers/designers are required", correct: true },
+      { text: "Increases reusability of components", correct: false },
+      { text: "Encourages customer/client feedback", correct: false },
+      { text: "Increases reusability of components, highly specialized & skilled developers/designers are required", correct: false }
+    ]
+  },
+  {
+    que_no: 35,
+    question: "For the best Software model suitable for the project, in which of the phase the developers decide a roadmap for project plan?",
+    ans: [
+      { text: "Software Design", correct: false },
+      { text: "System Analysis", correct: true },
+      { text: "Coding", correct: false },
+      { text: "Testing", correct: false }
+    ]
+  },
+  {
+    que_no: 36,
+    question: "Which one of the following models is not suitable for accommodating any change?",
+    ans: [
+      { text: "Build & Fix Model", correct: true },
+      { text: "Prototyping Model", correct: false },
+      { text: "RAD Model", correct: false },
+      { text: "Waterfall Model", correct: false }
+    ]
+  },
+  {
+    que_no: 37,
+    question: "_____________&_____________ are two kinds of software products.",
+    ans: [
+      { text: "CAD, CAM", correct: false },
+      { text: "Firmware, Embedded", correct: false },
+      { text: "Generic, Customised", correct: true },
+      { text: "None of the mentioned", correct: false }
+    ]
+  },
+  {
+    que_no: 38,
+    question: "Which is a software configuration management concept that helps us to control change without seriously impeding justifiable change?",
+    ans: [
+      { text: "Baselines", correct: true },
+      { text: "Source code", correct: false },
+      { text: "Data model", correct: false },
+      { text: "None of the mentioned", correct: false }
+    ]
+  },
+  {
+    que_no: 39,
+    question: "Purpose of process is to deliver software",
+    ans: [
+      { text: "In time", correct: false },
+      { text: "With acceptable quality", correct: false },
+      { text: "That is cost efficient", correct: false },
+      { text: "Both in time & with acceptable quality", correct: true }
+    ]
+  },
+  {
+    que_no: 40,
+    question: "Which one of the following is not an Umbrella Activity that complements the five process framework activities and help team manage and control progress, quality, change, and risk?",
+    ans: [
+      { text: "Reusability management", correct: true },
+      { text: "Risk management", correct: false },
+      { text: "Measurement", correct: false },
+      { text: "User Reviews", correct: false }
+    ]
+  },
+  {
+    que_no: 41,
+    question: "Process adopted for one project is same as the process adopted from another project.",
+    ans: [
+      { text: "True", correct: false },
+      { text: "False", correct: true }
+    ]
+  },
+  {
+    que_no: 42,
+    question: "The work associated with software engineering can be categorized into three generic phases, regardless of application area, project size, or complexity namely the__________ phase which focuses on what, the_________ phase which focuses on how and the_________ phase which focuses on change.",
+    ans: [
+      { text: "1, 2, 3", correct: false },
+      { text: "2, 1, 3", correct: false },
+      { text: "3, 2, 1", correct: true },
+      { text: "3, 1, 2", correct: false }
+    ]
+  },
+  {
+    que_no: 43,
+    question: "Which one of the following is not an application of embedded software product?",
+    ans: [
+      { text: "Keypad control of a security system", correct: false },
+      { text: "Pattern recognition game playing", correct: true },
+      { text: "Digital function of dashboard display in a car", correct: false },
+      { text: "None of the mentioned", correct: false }
+    ]
+  },
+  {
+    que_no: 44,
+    question: "Four types of change are encountered during the support phase. Which one of the following is not one that falls into such category?",
+    ans: [
+      { text: "Translation", correct: true },
+      { text: "Correction", correct: false },
+      { text: "Adaptation", correct: false },
+      { text: "Prevention", correct: false }
+    ]
+  },
+];

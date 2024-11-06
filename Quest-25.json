@@ -1,0 +1,229 @@
+let questions = [
+  {
+    que_no: 1,
+    question: "What is Software?",
+    ans: [
+      { text: "Software is set of programs", correct: false },
+      { text: "Software is documentation and configuration of data", correct: false },
+      { text: "Software is set of programs, documentation & configuration of data", correct: true },
+      { text: "None of the mentioned", correct: false }
+    ]
+  },
+  {
+    que_no: 2,
+    question: "Which of these does not account for software failure?",
+    ans: [
+      { text: "Increasing Demand", correct: false },
+      { text: "Low expectation", correct: false },
+      { text: "Increasing Supply", correct: true },
+      { text: "Less reliable and expensive", correct: false }
+    ]
+  },
+  {
+    que_no: 3,
+    question: "What are attributes of good software?",
+    ans: [
+      { text: "Software maintainability", correct: false },
+      { text: "Software functionality", correct: false },
+      { text: "Software development", correct: false },
+      { text: "Software maintainability & functionality", correct: true }
+    ]
+  },
+  {
+    que_no: 4,
+    question: "Which of these software engineering activities are not a part of software processes?",
+    ans: [
+      { text: "Software dependence", correct: true },
+      { text: "Software development", correct: false },
+      { text: "Software validation", correct: false },
+      { text: "Software specification", correct: false }
+    ]
+  },
+  {
+    que_no: 5,
+    question: "Which of these is incorrect?",
+    ans: [
+      { text: "Software engineering belongs to Computer science", correct: false },
+      { text: "Software engineering is a part of more general form of System Engineering", correct: false },
+      { text: "Computer science belongs to Software engineering", correct: true },
+      { text: "Software engineering is concerned with the practicalities of developing and delivering useful software", correct: false }
+    ]
+  },
+  {
+    que_no: 6,
+    question: "Which of these is true?",
+    ans: [
+      { text: "Generic products and customized products are types of software products", correct: true },
+      { text: "Generic products are produced by organization and sold to open market", correct: true },
+      { text: "Customized products are commissioned by particular customer", correct: true },
+      { text: "All of the mentioned", correct: true }
+    ]
+  },
+  {
+    que_no: 7,
+    question: "Which of these does not affect different types of software as a whole?",
+    ans: [
+      { text: "Heterogeneity", correct: false },
+      { text: "Flexibility", correct: true },
+      { text: "Business and social change", correct: false },
+      { text: "Security", correct: false }
+    ]
+  },
+  {
+    que_no: 8,
+    question: "The fundamental notions of software engineering does not account for?",
+    ans: [
+      { text: "Software processes", correct: false },
+      { text: "Software Security", correct: false },
+      { text: "Software reuse", correct: false },
+      { text: "Software Validation", correct: true }
+    ]
+  },
+  {
+    que_no: 9,
+    question: "Which of these is not true?",
+    ans: [
+      { text: "Web has led to availability of software services and possibility of developing highly distributed service based systems", correct: false },
+      { text: "Web based systems have led to degradation of programming languages", correct: true },
+      { text: "Web brings concept of software as service", correct: false },
+      { text: "Web based system should be developed and delivered incrementally", correct: false }
+    ]
+  },
+  {
+    que_no: 10,
+    question: "Which of the following is not project management goal?",
+    ans: [
+      { text: "Keeping overall costs within budget", correct: false },
+      { text: "Delivering the software to the customer at the agreed time", correct: false },
+      { text: "Maintaining a happy and well-functioning development team", correct: false },
+      { text: "Avoiding customer complaints", correct: true }
+    ]
+  },
+  {
+    que_no: 11,
+    question: "Which of the following is not a conflict in software development team?",
+    ans: [
+      { text: "Simultaneous updates", correct: false },
+      { text: "Shared and common code", correct: false },
+      { text: "Versions", correct: false },
+      { text: "Graphics issues", correct: true }
+    ]
+  },
+  {
+    que_no: 12,
+    question: "What are the types of requirements?",
+    ans: [
+      { text: "Availability", correct: false },
+      { text: "Reliability", correct: false },
+      { text: "Usability", correct: false },
+      { text: "All of the mentioned", correct: true }
+    ]
+  },
+  {
+    que_no: 13,
+    question: "Which one of the following is not a step of requirement engineering?",
+    ans: [
+      { text: "Elicitation", correct: false },
+      { text: "Design", correct: true },
+      { text: "Analysis", correct: false },
+      { text: "Documentation", correct: false }
+    ]
+  },
+  {
+    que_no: 14,
+    question: "The user system requirements are the parts of which document?",
+    ans: [
+      { text: "SDD", correct: false },
+      { text: "SRS", correct: true },
+      { text: "DDD", correct: false },
+      { text: "SRD", correct: false }
+    ]
+  },
+  {
+    que_no: 15,
+    question: "Which is one of the most important stakeholders from the following?",
+    ans: [
+      { text: "Entry level personnel", correct: false },
+      { text: "Middle level stakeholder", correct: false },
+      { text: "Managers", correct: false },
+      { text: "Users of the software", correct: true }
+    ]
+  },
+  {
+    que_no: 16,
+    question: "Project managers have to assess the risks that may affect a project.",
+    ans: [
+      { text: "True", correct: true },
+      { text: "False", correct: false }
+    ]
+  },
+  {
+    que_no: 17,
+    question: "The process each manager follows during the life of a project is known as:",
+    ans: [
+      { text: "Project Management", correct: false },
+      { text: "Manager life cycle", correct: false },
+      { text: "Project Management Life Cycle", correct: true },
+      { text: "All of the mentioned", correct: false }
+    ]
+  },
+  {
+    que_no: 18,
+    question: "Quality planning is the process of developing a quality plan for:",
+    ans: [
+      { text: "Team", correct: false },
+      { text: "Project", correct: true },
+      { text: "Customers", correct: false },
+      { text: "Project manager", correct: false }
+    ]
+  },
+  {
+    que_no: 19,
+    question: "A 66.6% risk is considered as:",
+    ans: [
+      { text: "Very low", correct: false },
+      { text: "Low", correct: false },
+      { text: "Moderate", correct: false },
+      { text: "High", correct: true }
+    ]
+  },
+  {
+    que_no: 20,
+    question: "Which of the following is an incorrect activity for the configuration management of a software system?",
+    ans: [
+      { text: "Internship management", correct: true },
+      { text: "Change management", correct: false },
+      { text: "Version management", correct: false },
+      { text: "System management", correct: false }
+    ]
+  },
+  {
+    que_no: 21,
+    question: "Which of the following is/are main parameters that you should use when computing the costs of a software development project?",
+    ans: [
+      { text: "Travel and training costs", correct: false },
+      { text: "Hardware and software costs", correct: false },
+      { text: "Effort costs (the costs of paying software engineers and managers)", correct: true },
+      { text: "All of the mentioned", correct: false }
+    ]
+  },
+  {
+    que_no: 22,
+    question: "Selection of a model is based on:",
+    ans: [
+      { text: "Requirements", correct: false },
+      { text: "Development team & Users", correct: false },
+      { text: "Project type and associated risk", correct: false },
+      { text: "All of the mentioned", correct: true }
+    ]
+  },
+  {
+    que_no: 23,
+    question: "The spiral model was originally proposed by:",
+    ans: [
+      { text: "IBM", correct: false },
+      { text: "Barry Boehm", correct: true },
+      { text: "Pressman", correct: false },
+      { text: "Royce", correct: false }
+    ]
+  }] ;
